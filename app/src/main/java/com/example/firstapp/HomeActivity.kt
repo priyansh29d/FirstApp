@@ -11,7 +11,7 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        var name = intent.extras?.getString("sk")
+        var name = intent.extras?.getString("AV")
         var tvHome = findViewById<TextView>(R.id.tvHome)
         tvHome.text = name
 
