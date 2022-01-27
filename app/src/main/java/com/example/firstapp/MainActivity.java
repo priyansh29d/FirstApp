@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.provider.AlarmClock;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.EditText;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,7 +32,22 @@ public class MainActivity extends AppCompatActivity {
             case R.id.btnCancel:
                 createAlarm("bajaj",14,29);
                 break;
+            case R.id.btnFinish:
+                sendContact();
+                break;
         }
+    }
+    private void sendContact() {
+        //get the contact from edittext
+        EditText nameEditText = findViewById(R.id.etName);
+        String contact = nameEditText.getText().toString();
+        //put the contact in intent
+        Intent cIntent = new Intent();
+        cIntent.putExtra("con",contact);
+        //set the result
+        setResult(RESULT_OK,cIntent);
+        //close this activity
+        finish();
     }
 
     public void createAlarm(String message, int hour, int minutes) {
