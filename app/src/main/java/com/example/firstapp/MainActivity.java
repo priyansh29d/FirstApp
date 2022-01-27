@@ -15,10 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
-    public void makeToast(View view){
-        Toast.makeText(this, "logging in", Toast.LENGTH_SHORT).show();
-    }
     public void clickHandler(View view) {
-        Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "loggin in", Toast.LENGTH_SHORT).show();
     }
 }
